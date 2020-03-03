@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lab8</title>
+</head>
+
+<body>
+<div>
+	<h1>0</h1>
+	<input type="number">
+	<button>+</button>
+	</div>
+	
+	
+<script>
+	const calc={
+					addBtn:document.querySelector('button'),
+					inputTxt:document.querySelector('input'),
+					h1:document.querySelector('h1'),
+					total:0,
+		
+					init()
+					{
+								this.addBtn.addEventListener('click',this.add.bind(this));
+					},
+		
+		
+					add()
+				{
+						//store new value
+						//get the inputed no. and keep adding
+						this.total+=Number(this.inputTxt.value);
+					
+					/*this.total=this.total+Number(this.inputTxt.value);
+					console.log(typeof this.total);*/
+					
+					//display on the head
+					this.h1.textContent=this.total;
+					
+					//clearing value of input on head
+					this.inputTxt.value='';
+						
+				}
+	};
+	
+		calc.init();
+	
+	</script>	
+</body>
+</html>
